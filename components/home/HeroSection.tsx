@@ -2,38 +2,50 @@ import Link from "next/link";
 
 const HeroSection: React.FC = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-white">
-      <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-        <h1 className="text-5xl md:text-7xl font-light text-gray-900 mb-6 leading-tight">
+    <section className="relative bg-white">
+      {/* Hero Content */}
+      <div className="max-w-4xl mx-auto px-4 pt-12 pb-8 text-center">
+        <h1 className="text-4xl md:text-6xl font-semibold text-gray-900 mb-3 leading-tight tracking-tight">
           Media that
           <br />
-          <span className="font-semibold">moves forward</span>
+          moves forward
         </h1>
-        
-        <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-2xl mx-auto font-light">
-          Connecting audiences through innovative storytelling across television, digital media, and mobile platforms.
+
+        <p className="text-lg md:text-xl text-gray-600 mb-6 font-normal max-w-2xl mx-auto leading-relaxed">
+          Connecting audiences through innovative storytelling across
+          television, digital media, and mobile platforms.
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
+        <div className="flex flex-col sm:flex-row gap-3 justify-center mb-12">
           <Link
             href="/nasiye"
-            className="bg-red-500 hover:bg-red-600 text-white px-8 py-4 rounded-full text-lg font-medium transition-all duration-200 hover:scale-105"
+            className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full text-lg font-medium transition-all duration-200 hover:scale-105"
           >
             Download Nasiye App
           </Link>
           <Link
             href="/about"
-            className="border border-gray-300 hover:border-gray-400 text-gray-900 px-8 py-4 rounded-full text-lg font-medium transition-all duration-200 hover:scale-105"
+            className="border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-4 rounded-full text-lg font-medium transition-all duration-200 hover:scale-105"
           >
             Learn More
           </Link>
         </div>
+      </div>
 
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <svg className="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-          </svg>
+      {/* Large Product Image Section */}
+      <div className="relative bg-gray-50 py-12">
+        <div className="max-w-5xl mx-auto px-4">
+          <div className="bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl h-64 flex items-center justify-center">
+            <div className="text-center">
+              <div className="text-6xl mb-4">📺</div>
+              <p className="text-xl font-semibold text-gray-700">
+                Asal Media Experience
+              </p>
+              <p className="text-gray-500 mt-1">
+                Premium content across all platforms
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
